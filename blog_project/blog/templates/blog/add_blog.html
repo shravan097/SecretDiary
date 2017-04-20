@@ -1,0 +1,41 @@
+
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Secret Diary</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+
+</head>
+
+<body>
+<div class="row container centered ">
+        <h1> Enter a Blog Post Here</h1>
+
+        <form id="BlogForm" method="post" action="/blog/add_blog/">
+            <div class="input-field col s12">
+            {% csrf_token %}
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text}}<br>
+                {{field}}
+                <br>
+            {% endfor %}
+            <br>
+            <input type="submit" name="submit" value="Submit Post"/>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>

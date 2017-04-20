@@ -1,0 +1,38 @@
+
+{% extends "blog/base_template.html" %}
+{% block content %}
+	<div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">Secret <span>Diary</span></span></h1>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Log In</h2>
+			</div>
+                {% if messages %}
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                {% endif %}
+                <form id="login_form" method="post" action="/blog/">
+                    {% csrf_token %}
+
+                    <label for="username">Username</label>
+                    <br/>
+                    <input type="text" name="username">
+                    <br/>
+                    <label for="password">Password</label>
+                    <br/>
+                    <input type="password" name="password">
+                    <br/>
+                    <button type="submit" value="Submit">Sign In</button>
+                    <br/>
+                    <br>
+					><a href="register">Register Here</a><
+                    <br/>
+                </form>
+        </div>
+	</div>
+{% endblock %}
+
+

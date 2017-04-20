@@ -1,0 +1,28 @@
+{% extends "blog/base_template.html" %}
+
+
+
+{% block content %}
+    <div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">Secret <span>Blog</span></span></h1>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Register Here</h2>
+			</div>
+                <form id="user_form" method="post" action="/blog/register/"
+                enctype="multipart/form-data">
+
+                {% if registered %}
+                        <h3>You are Registered!<br>
+                            Please go back to Login page <a href="/blog/"><em>here</em></a> </h3>
+                {% endif %}
+                    {% csrf_token %}
+                    {{ user_form.as_p}}
+                    <input type="submit" name="submit" value="Register" />
+                    <br/>
+                </form>
+        </div>
+	</div>
+{% endblock %}
