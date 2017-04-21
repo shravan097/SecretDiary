@@ -19,7 +19,7 @@ Run this on terminal `sudo pip3 install Django`
 
 And just to check if you installed Django properlly. Run  `python3 -m django --version`
 
-Now, go to the directory where you have this SecretDiary cloned. Then again go inside blog_project.
+Now, go to the directory where you have cloned SecretDiary. Then again go inside blog_project.
 
 Then run this:
 
