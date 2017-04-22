@@ -47,7 +47,7 @@
 {#    <img src="#" style="width:100%">#}
     <div class="w3-container w3-padding-8">
 
-                <h3><a href="{{ entry.id }}"><b>{{ entry.title|upper }}</b></a></h3>
+                <h3><b>{{ entry.title|upper }}</b></h3>
                 <h5><span class="w3-opacity">{{ entry.date }}</span></h5>
                 <div class="w3-container">
                     <p >{{ entry.entry}}</p>
@@ -59,39 +59,6 @@
 <!-- END BLOG ENTRIES -->
 </div>
 
-
-
-{#<!-- Introduction menu -->#}
-{#<div class="w3-col l4" >#}
-{##}
-{#  <!-- Posts -->#}
-{#  <div class="w3-card-2 w3-margin">#}
-{#    <div class="w3-container w3-padding w3-white">#}
-{#      <h4>Posts</h4>#}
-{#    </div>#}
-{#    <ul class="w3-ul w3-hoverable w3-white w3-opacity-min">#}
-{#      <li class="w3-padding-16">#}
-{#        <!-- INCASE NEED OF IMAGE USE THIS TAG <img src="#" alt="Image" class="w3-left w3-margin-right" style="width:50px">-->#}
-{#        <span class="w3-large"><a class="page-scroll" href="#article1" style="text-decoration: none;">ARTICLE 1</a></span><br>#}
-{#        <span>Sed mattis nunc</span>#}
-{#      </li>#}
-{#      <li class="w3-padding-16">#}
-{#        <span class="w3-large"><a class="page-scroll" href="#article2" style="text-decoration: none;">ARTICLE 2 </a></span><br>#}
-{#        <span>Praes tinci sed</span>#}
-{#      </li>#}
-{#      <li class="w3-padding-16">#}
-{#        <span class="w3-large"><a class="page-scroll" href="#article3" style="text-decoration: none;">ARTICLE 3 </a> </span> <br>#}
-{#        <span>Ultricies congue</span>#}
-{#      </li>#}
-{#      <li class="w3-padding-16 w3-hide-medium w3-hide-small">#}
-{#        <span class="w3-large"><a class="page-scroll" href="#article4" style="text-decoration: none;">ARTICLE 4</a></span><br>#}
-{#        <span>Lorem ipsum dipsum</span>#}
-{#      </li>#}
-{#    </ul>#}
-{#  </div>#}
-{#  <hr>#}
-{##}
-{#<!-- END Introduction Menu -->#}
 </div>
     <form id="add_button" method="GET" action="/blog/add_blog/">
         <input type="submit" name="submit" value="New Entry"/>
