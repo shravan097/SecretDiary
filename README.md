@@ -29,3 +29,5 @@ Now go to your browser and type this on the URL: (http://127.0.0.1:8000/blog/).
 
 Your Secret Diary should be running.
 
+If error occurs, create an empty `_init__.py` file inside the blog app.  This is required to create a Python Module.
+
